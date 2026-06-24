@@ -2,15 +2,6 @@ import { Link } from 'react-router-dom';
 import Leaf from '../components/Leaf.jsx';
 import { writings } from '../writings/index.js';
 
-function formatDate(dateStr) {
-  const [y, m, d] = dateStr.split('-').map(Number);
-  return new Date(y, m - 1, d).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  });
-}
-
 export default function Browse() {
   return (
     <div className="browse-page">
@@ -28,7 +19,7 @@ export default function Browse() {
             <Link to={`/writing/${w.slug}`} className="writing-title">{w.title}</Link>
             <span className="writing-excerpt">{w.excerpt}</span>
             <span className="writing-category">{w.category}</span>
-            <span className="writing-date">{formatDate(w.date)}</span>
+            <span className="writing-date">{w.date}</span>
           </div>
         ))}
       </div>

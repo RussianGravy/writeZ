@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import Leaf from '../components/Leaf.jsx';
-import { featured } from '../writings/index.js';
+import { writings } from '../writings/index.js';
 
 const ordinals = ['1st', '2nd', '3rd'];
 
+const featured = writings.slice(0, 3);
 export default function Home() {
+
+  console.log(writings);
   return (
     <>
       <div className="hero">

@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <NavLink to="/" className="nav-logo">Marcus Writes</NavLink>
+        <NavLink to="/" className="nav-logo">Marcus Writez</NavLink>
         <div className="nav-links">
           <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Home
